@@ -1,0 +1,264 @@
+.pdf-carousel-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.pdf-carousel-modal {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pdf-carousel-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pdf-carousel-title {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pdf-carousel-count {
+  flex: 0 0 auto;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.pdf-carousel-close {
+  flex: 0 0 auto;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+.pdf-carousel-close:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.pdf-carousel-body {
+  position: relative;
+  min-height: 0;
+}
+
+.pdf-carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  border-radius: 14px;
+  scrollbar-width: none;
+  background: #000;
+}
+.pdf-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.pdf-carousel-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: min(70vh, 640px);
+}
+.pdf-carousel-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.pdf-carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 2;
+}
+.pdf-carousel-nav:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.pdf-carousel-prev {
+  left: 8px;
+}
+.pdf-carousel-next {
+  right: 8px;
+}
+
+.pdf-carousel-dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pdf-carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  padding: 0;
+  flex: 0 0 auto;
+}
+.pdf-carousel-dot.active {
+  background: var(--primary_color, #28e98c);
+}
+
+@media (max-width: 575px) {
+  .pdf-carousel-overlay {
+    padding: 10px;
+  }
+  .pdf-carousel-slide {
+    height: min(60vh, 520px);
+  }
+  .pdf-carousel-nav {
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+  }
+  .pdf-carousel-close {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    font-size: 16px;
+  }
+  .pdf-carousel-header {
+    font-size: 12px;
+  }
+}
+
+/* --- Latest project showcase --- */
+.latest-project-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--primary_color, #28e98c);
+  color: var(--primary_color, #28e98c);
+  border-radius: 30px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  margin-bottom: 24px;
+}
+.latest-project-badge .pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary_color, #28e98c);
+  animation: latest-project-pulse 1.6s ease-in-out infinite;
+}
+@keyframes latest-project-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.4); }
+}
+
+.latest-project-showcase {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.latest-project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 14px;
+}
+
+.latest-project-thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 4 / 5;
+  background: #111;
+  height: auto;
+}
+.latest-project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+.latest-project-thumb:hover img,
+.latest-project-thumb:focus-visible img {
+  transform: scale(1.05);
+}
+
+.latest-project-client {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 20px 0 0;
+}
+.latest-project-client span {
+  color: var(--primary_color, #28e98c);
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+.latest-project-block:hover .latest-project-client span {
+  border-color: var(--primary_color, #28e98c);
+}
+
+@media (max-width: 480px) {
+  .latest-project-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+  }
+  .latest-project-client {
+    font-size: 17px;
+  }
+  .latest-project-badge {
+    font-size: 11px;
+    padding: 7px 14px;
+  }
+}

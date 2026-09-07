@@ -1,0 +1,25 @@
+.scroll-animation.reveal-pending {
+  transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1), transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0;
+}
+
+.scroll-animation.reveal-pending[data-animation="fade_from_bottom"] {
+  transform: translateY(120px);
+}
+.scroll-animation.reveal-pending[data-animation="fade_from_top"] {
+  transform: translateY(-120px);
+}
+.scroll-animation.reveal-pending[data-animation="fade_from_left"] {
+  transform: translateX(-120px);
+}
+.scroll-animation.reveal-pending[data-animation="fade_from_right"] {
+  transform: translateX(120px);
+}
+.scroll-animation.reveal-pending[data-animation="rotate_up"] {
+  transform: translateY(120px) rotate(10deg);
+}
+
+.scroll-animation.revealed {
+  opacity: 1;
+  transform: none;
+}
