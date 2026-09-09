@@ -182,7 +182,7 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
   text-decoration: none;
-  margin-bottom: 24px;
+  margin-top: 40px;
 }
 .latest-project-badge .pulse-dot {
   width: 8px;
@@ -197,10 +197,9 @@
 }
 
 .latest-project-showcase {
-  margin-top: 40px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 40px;
 }
 
 .latest-project-grid {

@@ -30,7 +30,10 @@ export default function SubpagesLayout({ children }) {
 
       <main className="drake-main">
         <div id="smooth-wrapper">
-          <div id="smooth-content">{children}</div>
+          <div id="smooth-content">
+            <LeftSidebar photoSrc="/assets/agnesh-portfolio.png" />
+            {children}
+          </div>
         </div>
       </main>
     </LightboxProvider>

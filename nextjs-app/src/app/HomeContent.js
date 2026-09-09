@@ -86,13 +86,11 @@ export default function HomeContent() {
       <main className="drake-main">
         <div id="smooth-wrapper">
           <div id="smooth-content">
+            <LeftSidebar photoSrc="/agnesh-jha.jpeg" showResumeButton={false} />
             <section className="hero-section page-section scroll-to-page" id="home">
 
               <div className="custom-container">
                 <div className="hero-content content-width" id="about">
-                  <a href="/#latest-work" className="latest-project-badge scroll-animation" data-animation="fade_in">
-                    <span className="pulse-dot" /> Latest Project
-                  </a>
                   <div className="section-header">
                     <h4 className="subtitle scroll-animation" data-animation="fade_from_bottom">
                       Introduce 🏠
@@ -198,8 +196,22 @@ export default function HomeContent() {
                     </div>
                   </div>
 
-                  <LatestProjectShowcase />
+                </div>
+              </div>
+            </section>
 
+            <section className="latest-work-area page-section scroll-to-page" id="latest-work">
+              <div className="custom-container">
+                <div className="portfolio-content content-width">
+                  <div className="section-header">
+                    <h4 className="subtitle scroll-animation" data-animation="fade_from_bottom">
+                      Latest Project 🆕
+                    </h4>
+                    <h1 className="scroll-animation" data-animation="fade_from_bottom">Fresh off the <span>desk</span>
+                    </h1>
+                  </div>
+
+                  <LatestProjectShowcase />
                 </div>
               </div>
             </section>

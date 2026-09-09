@@ -1,0 +1,31 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <url>
+        <loc>https://agneshjha.in/</loc>
+        <priority>0.60</priority>
+    </url>
+    <url>
+        <loc>https://agneshjha.in/social-media</loc>
+        <priority>0.60</priority>
+    </url>
+    <url>
+        <loc>https://agneshjha.in/blog</loc>
+        <priority>0.60</priority>
+    </url>
+    <url>
+        <loc>https://agneshjha.in/emailer</loc>
+        <priority>0.60</priority>
+    </url>
+    <url>
+        <loc>https://agneshjha.in/portfolio</loc>
+        <priority>0.60</priority>
+    </url>
+    <url>
+        <loc>https://agneshjha.in/sales-deck</loc>
+        <priority>0.60</priority>
+    </url>
+
+</urlset>

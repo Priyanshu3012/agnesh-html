@@ -10,21 +10,25 @@ const geoffStevenCarousels = [1, 2, 3, 4, 5].map((n) => ({
   slides: [1, 2, 3, 4].map((s) => `/assets/images/latest-project/carousel${n}/slide-${s}.jpg`),
 }));
 
-// 18 slides split into 5 groups of [4, 4, 4, 3, 3], same pattern as the Geoff Steven carousels.
-const ASTROLOGY_GROUP_SIZES = [4, 4, 4, 3, 3];
-const astrologyCarousels = (() => {
-  let cursor = 0;
-  return ASTROLOGY_GROUP_SIZES.map((size, i) => {
-    const slides = Array.from({ length: size }, (_, j) => `/assets/images/latest-project/astrology/slide-${cursor + j + 1}.jpg`);
-    cursor += size;
-    return {
-      key: `astrology-${i + 1}`,
-      label: `Carousel ${i + 1}`,
-      title: `Astrologer — Carousel ${i + 1}`,
-      slides,
-    };
-  });
-})();
+// The 18 astrology images are 6 distinct ad creatives (same headline/colour
+// theme), each exported in 3 aspect-ratio variants. Grouped by creative so
+// every carousel only ever shows one consistent colour scheme — mixing them
+// alphabetically (as before) put off-white, yellow, pink and black designs
+// side by side in the same carousel, which looked random/broken.
+const ASTROLOGY_GROUPS = [
+  { label: 'Love Marriage Solution', indices: [1, 10, 14] },
+  { label: 'Free Consultation', indices: [2, 8, 17] },
+  { label: 'Inter-Caste Marriage', indices: [3, 15, 16] },
+  { label: 'Love Problems', indices: [4, 9, 13] },
+  { label: 'Divorce Problems', indices: [5, 6, 7] },
+  { label: 'Facing Relationship Problems', indices: [11, 12, 18] },
+];
+const astrologyCarousels = ASTROLOGY_GROUPS.map((group, i) => ({
+  key: `astrology-${i + 1}`,
+  label: group.label,
+  title: `Astrologer — ${group.label}`,
+  slides: group.indices.map((n) => `/assets/images/latest-project/astrology/slide-${n}.jpg`),
+}));
 
 const PROJECTS = [
   {
@@ -43,7 +47,7 @@ export default function LatestProjectShowcase() {
   const [modal, setModal] = useState(null);
 
   return (
-    <div className="latest-project-showcase" id="latest-work">
+    <div className="latest-project-showcase">
       {PROJECTS.map((project) => (
         <div className="latest-project-block" key={project.id}>
           <div className="latest-project-grid">
@@ -62,6 +66,10 @@ export default function LatestProjectShowcase() {
           <h2 className="latest-project-client"><span>{project.client}</span></h2>
         </div>
       ))}
+
+      <a href="/#latest-work" className="latest-project-badge scroll-animation" data-animation="fade_in">
+        <span className="pulse-dot" /> Latest Project
+      </a>
 
       {modal && (
         <PdfCarouselModal title={modal.title} slides={modal.slides} onClose={() => setModal(null)} />
