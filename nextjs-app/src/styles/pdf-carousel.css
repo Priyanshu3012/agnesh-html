@@ -248,6 +248,22 @@
   border-color: var(--primary_color, #28e98c);
 }
 
+.latest-project-visit {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #cfcfcf;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: 0.3s;
+}
+.latest-project-visit:hover {
+  color: var(--primary_color, #28e98c);
+  border-color: var(--primary_color, #28e98c);
+}
+
 @media (max-width: 480px) {
   .latest-project-grid {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));

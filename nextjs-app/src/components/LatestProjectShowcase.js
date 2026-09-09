@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import PdfCarouselModal from './PdfCarouselModal';
 
-const geoffStevenCarousels = [1, 2, 3, 4, 5].map((n) => ({
+const geoffStevenCarousels = [1, 3, 5].map((n) => ({
   key: `geoff-${n}`,
   label: `Carousel ${n}`,
   title: `Geoff Steven & Sons — Carousel ${n}`,
@@ -34,11 +34,13 @@ const PROJECTS = [
   {
     id: 'geoff-steven',
     client: 'Geoff Steven & Sons — Styling Opticians & Audiologists',
+    website: 'https://www.geoffstevenandsons.co.uk/',
     items: geoffStevenCarousels,
   },
   {
     id: 'astrologer',
     client: 'Astrologer — Social Media Ad Creatives',
+    website: 'https://astroshyamsundar.com/',
     items: astrologyCarousels,
   },
 ];
@@ -64,12 +66,16 @@ export default function LatestProjectShowcase() {
             ))}
           </div>
           <h2 className="latest-project-client"><span>{project.client}</span></h2>
+          <a
+            href={project.website}
+            target="_blank"
+            rel="noreferrer"
+            className="latest-project-visit"
+          >
+            Visit website <i className="las la-external-link-alt" />
+          </a>
         </div>
       ))}
-
-      <a href="/#latest-work" className="latest-project-badge scroll-animation" data-animation="fade_in">
-        <span className="pulse-dot" /> Latest Project
-      </a>
 
       {modal && (
         <PdfCarouselModal title={modal.title} slides={modal.slides} onClose={() => setModal(null)} />

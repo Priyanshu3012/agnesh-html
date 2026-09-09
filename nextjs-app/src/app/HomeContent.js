@@ -130,7 +130,7 @@ export default function HomeContent() {
                     <h4 className="subtitle scroll-animation" data-animation="fade_from_bottom">
                       portfolio 💼
                     </h4>
-                    <h1 className="scroll-animation" data-animation="fade_from_bottom">Featured
+                    <h1 className="scroll-animation" data-animation="fade_from_bottom">Featured{' '}
                       <span>Projects</span>
                     </h1>
                   </div>
@@ -204,9 +204,9 @@ export default function HomeContent() {
               <div className="custom-container">
                 <div className="portfolio-content content-width">
                   <div className="section-header">
-                    <h4 className="subtitle scroll-animation" data-animation="fade_from_bottom">
-                      Latest Project 🆕
-                    </h4>
+                    <a href="/#latest-work" className="latest-project-badge scroll-animation" data-animation="fade_in">
+                      <span className="pulse-dot" /> Latest Project
+                    </a>
                     <h1 className="scroll-animation" data-animation="fade_from_bottom">Fresh off the <span>desk</span>
                     </h1>
                   </div>
@@ -292,7 +292,7 @@ export default function HomeContent() {
                     <h4 className="subtitle scroll-animation" data-animation="fade_from_bottom">
                       What People Say ⭐
                     </h4>
-                    <h1 className="scroll-animation" data-animation="fade_from_bottom">Feedback from
+                    <h1 className="scroll-animation" data-animation="fade_from_bottom">Feedback from{' '}
                       <span>clients</span> and <span>colleagues</span> I&apos;ve had the pleasure to work with
                     </h1>
                   </div>
@@ -333,7 +333,7 @@ export default function HomeContent() {
                     <h4 className="subtitle scroll-animation" data-animation="fade_from_bottom">
                       contact 🙋🏻‍♂️
                     </h4>
-                    <h1 className="scroll-animation" data-animation="fade_from_bottom">Let&apos;s Work
+                    <h1 className="scroll-animation" data-animation="fade_from_bottom">Let&apos;s Work{' '}
                       <span>Together!</span>
                     </h1>
                   </div>
