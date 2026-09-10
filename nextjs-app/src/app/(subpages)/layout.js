@@ -26,12 +26,12 @@ export default function SubpagesLayout({ children }) {
     <LightboxProvider>
       <MobileMenu navItems={NAV_ITEMS} activeIndex={activeIndex} />
       <ScrollNav navItems={NAV_ITEMS} activeIndex={activeIndex} />
-      <LeftSidebar photoSrc="/assets/agnesh-portfolio.png" />
+      <LeftSidebar photoSrc="/agnesh-jha.jpeg" />
 
       <main className="drake-main">
         <div id="smooth-wrapper">
           <div id="smooth-content">
-            <LeftSidebar photoSrc="/assets/agnesh-portfolio.png" />
+            <LeftSidebar photoSrc="/agnesh-jha.jpeg" />
             {children}
           </div>
         </div>
