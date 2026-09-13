@@ -7,7 +7,7 @@ const SOCIAL_LINKS = [
   { href: "https://www.behance.net/agneshjha", icon: "lab la-behance" },
 ];
 
-export default function LeftSidebar({ photoSrc, showResumeButton = true }) {
+export default function LeftSidebar({ photoSrc }) {
   return (
     <div className="left-sidebar">
       <div className="sidebar-header d-flex align-items-center justify-content-center">
@@ -45,16 +45,6 @@ export default function LeftSidebar({ photoSrc, showResumeButton = true }) {
           </li>
         ))}
       </ul>
-      {showResumeButton && (
-        <a
-          href="https://agneshjha.in/Agnesh-Jha_UI-Visual-Designer_Resume.pdf"
-          target="_blank"
-          rel="noreferrer"
-          className="theme-btn"
-        >
-          <i className="las la-user-tie" /> Resume
-        </a>
-      )}
     </div>
   );
 }

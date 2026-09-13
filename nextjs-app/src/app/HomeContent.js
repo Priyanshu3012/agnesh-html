@@ -81,12 +81,12 @@ export default function HomeContent() {
     <LightboxProvider>
       <MobileMenu navItems={NAV_ITEMS} activeIndex={activeIndex} />
       <ScrollNav navItems={NAV_ITEMS} activeIndex={activeIndex} />
-      <LeftSidebar photoSrc="/agnesh-jha.jpeg" showResumeButton={false} />
+      <LeftSidebar photoSrc="/agnesh-jha.jpeg" />
 
       <main className="drake-main">
         <div id="smooth-wrapper">
           <div id="smooth-content">
-            <LeftSidebar photoSrc="/agnesh-jha.jpeg" showResumeButton={false} />
+            <LeftSidebar photoSrc="/agnesh-jha.jpeg" />
             <section className="hero-section page-section scroll-to-page" id="home">
 
               <div className="custom-container">
